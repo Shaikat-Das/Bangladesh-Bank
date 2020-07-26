@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,8 @@
                 <label class="form-check-label" for="exampleCheck1">Save My Password</label>
               </div>
 
-              <button type="submit" id ="login" class="btn btn-primary">Log In</button>
+              <button type="button" id ="login" class="btn btn-primary">Log In</button>
+              <!-- button type button dite hobe ta na kora submit disilam tai page ta disappear hine -->
             </form>
         </div>
     </div>
@@ -45,7 +47,7 @@
   const loginBtn = document.getElementById("login");
   loginBtn.addEventListener("click", function(){
     const welcomeArea = document.getElementById("login-window");
-    welcomeArea.style.display="block"
+    welcomeArea.style.display="none"
   })
 </script>
 
