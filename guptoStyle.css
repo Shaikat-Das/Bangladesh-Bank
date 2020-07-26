@@ -1,0 +1,40 @@
+body{
+        width: auto;
+        height: auto;
+    background-color: rgb(255, 219, 219);
+ }
+#login-window {
+    margin-top: 10%;
+}
+.login-area{
+        margin: 10%;
+      padding: 5%;
+      border: 15px solid rgb(54, 132, 235);
+        border-radius: 15px;   
+    }
+.form-area{
+    margin: 2%;
+    padding: 2%;
+    border: 5px solid rgb(54, 132, 235);
+    background-color: rgb(138, 178, 231) ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px gray;
+}
+button{
+    margin-top: 3%;
+}
+button:hover{
+        font-size: 110%;
+}
+.bank-image{
+    width: 100px;
+}
+.font {
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+}
+.input{
+    width: 250px;
+    margin-left: 15px;
+}
+/* log in window of the bank is complete */
