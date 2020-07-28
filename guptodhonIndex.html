@@ -81,23 +81,20 @@
       <div class="col-md-6">
         <div class="diposit-withdraw-area">
           <h2>Diposit</h2>
-          <input id="diposit-amount" class="input-area" type="number"placeholder="$ amount you want to diposit"> <br>
-          <button id="diposit-button" type="submit" class="btn btn-primary">Diposit</button>
+          <input id="deposit-amount" class="input-area" type="number"placeholder="$ amount you want to diposit"> <br>
+          <button id="deposit-button"  class="btn btn-primary">Diposit</button>
         </div>
       </div>
       <div class="col-md-6">
         <div class="diposit-withdraw-area">
           <h2>Withdrawl</h2>
           <input class="input-area" type="number" placeholder="$ amount you want to withdraw"> <br>
-          <button id="withdraw" type="submit" class="btn btn-primary">Withdraw</button>
+          <button id="withdraw"  class="btn btn-primary">Withdraw</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
   <script>
     // log in button event handler
@@ -114,19 +111,22 @@
            })
 
           //  diposit button event handler 20.9 module
-          const dipositBtn = document.getElementById("diposit-button");
-          dipositBtn.addEventListener("click", function(){
-            const dipositAmount = document.getElementById("diposit-amount").value;
-            const dipositNumber = parseFloat("dipositAmount");
+          const depositBtn = document.getElementById("deposit-button");
+          depositBtn.addEventListener("click", function(){
+           
+            const depositAmount = document.getElementById("deposit-amount").value;
+            const depositNumber = parseFloat(depositAmount);
               // 20.10 get inner text using java script, update text dynamically
 
               const currentDiposit = document.getElementById("currentDiposit").innerText;
-              const currentDipositNumber = parseFloat("currentDiposit");
-              const totalDiposit = dipositNumber + currentDipositNumber;
-              consol.log(totalDiposit);
+              const currentDipositNumber = parseFloat(currentDiposit);
+              const totalDiposit = depositNumber + currentDipositNumber;
+            
+              document.getElementById("currentDiposit").innerText = totalDiposit;
+              
+              document.getElementById("deposit-amount").value = "";
 
-
-          })
+              })
 
 
   </script>
