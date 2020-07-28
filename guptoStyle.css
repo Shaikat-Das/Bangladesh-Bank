@@ -38,3 +38,42 @@ button:hover{
     margin-left: 15px;
 }
 /* log in window of the bank is complete */
+
+#transaction-area{
+    display: none;
+}
+/* j id te  click korar por display block dilam sei id tai display none dao css sheet a */
+
+.trans-area{
+    margin: 10%;
+}
+.row{
+    margin: 10px 25px;
+}
+.box{
+    margin: 5px 15px;
+    padding: 5px 15px;
+    background-color: rgb(11, 63, 46);
+    color: azure;
+    text-align: center;
+    border-radius: 15px;
+}
+/* transaction area 2 er style below */
+
+#transaction-area2{
+    display: none;
+}
+
+.diposit-withdraw-area{
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(160, 187, 238);
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px gray;
+    /* ai j style dilam ta upor er .form-area er same */
+}
+.input-area{
+    width: 260px;
+}
+
+

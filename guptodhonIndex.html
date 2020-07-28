@@ -38,18 +38,98 @@
               </div>
 
               <button type="button" id ="login" class="btn btn-primary">Log In</button>
-              <!-- button type button dite hobe ta na kora submit disilam tai page ta disappear hine -->
+              <!-- button type button dite hobe ta na kora submit disilam tai page ta disappear hobe -->
             </form>
         </div>
     </div>
     <!-- log in window of the bank is complete  -->
- <script>
-  const loginBtn = document.getElementById("login");
-  loginBtn.addEventListener("click", function(){
-    const welcomeArea = document.getElementById("login-window");
-    welcomeArea.style.display="none"
-  })
-</script>
+
+    <!-- Transaction area -->
+    <div id="transaction-area">
+
+      <h1 class = "text-center , trans-area">Transaction Area</h1>
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+              <div class="box">
+                <h5>Diposit Amount</h5>
+                <h2>$ <span id="currentDiposit">000</span> </h2>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="box">
+                <h5>Withdrawl Amount</h5>
+                <h2>$000</h2>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="box">
+                <h5>Balance Amount</h5>
+                <h2>$1240</h2>
+              </div>
+          </div>
+            <!-- box gulo akta kore class a nite hobe col-md-4 er pase oi class a dila problem hobe so h5 h2 gulo age akta box a nita hobe -->
+        </div>
+      </div>
+    </div>
+<!-- transaction area 2 below -->
+<div id="transaction-area2">
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="diposit-withdraw-area">
+          <h2>Diposit</h2>
+          <input id="diposit-amount" class="input-area" type="number"placeholder="$ amount you want to diposit"> <br>
+          <button id="diposit-button" type="submit" class="btn btn-primary">Diposit</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="diposit-withdraw-area">
+          <h2>Withdrawl</h2>
+          <input class="input-area" type="number" placeholder="$ amount you want to withdraw"> <br>
+          <button id="withdraw" type="submit" class="btn btn-primary">Withdraw</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    // log in button event handler
+    const loginBtn = document.getElementById("login");
+    loginBtn.addEventListener("click", function(){
+      const welcomeArea = document.getElementById("login-window");
+      welcomeArea.style.display="none"
+      // j id te  click korar por display block dilam sei id tai display none dao css sheet a
+      const transactionArea = document.getElementById("transaction-area");
+      transactionArea.style.display = "block"
+    // transaction area 2 k hide and seek
+    const transactionArea2 = document.getElementById("transaction-area2");
+    transactionArea2.style.display = "block"
+           })
+
+          //  diposit button event handler 20.9 module
+          const dipositBtn = document.getElementById("diposit-button");
+          dipositBtn.addEventListener("click", function(){
+            const dipositAmount = document.getElementById("diposit-amount").value;
+            const dipositNumber = parseFloat("dipositAmount");
+              // 20.10 get inner text using java script, update text dynamically
+
+              const currentDiposit = document.getElementById("currentDiposit").innerText;
+              const currentDipositNumber = parseFloat("currentDiposit");
+              const totalDiposit = dipositNumber + currentDipositNumber;
+              consol.log(totalDiposit);
+
+
+          })
+
+
+  </script>
 
 
 <!-- bootstrap js link below
